@@ -8,7 +8,7 @@ import shutil
 import argparse
 import ConfigParser
 
-if __name__ == '__main__':
+def main():
   parser = argparse.ArgumentParser(description='Update Gondor config with multiple untracked files')
   parser.add_argument('directories', metavar='DIR', nargs='+', help='Directory to recurse')
   parser.add_argument('--config', dest='config', default='.gondor/config', help='Path to config file, Default: .gondor/config')
