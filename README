@@ -26,7 +26,7 @@ Multiple Directories:
 untracked plugins/cool-plugin1 plugins/cool-plugin2
 
 Exclude Files:
-untracked --exclude *.pyc --exclude *.bak plugins/cool-plugin1
+untracked --exclude "*.pyc" --exclude "*.bak" plugins/cool-plugin1
 
 Exclude Directory:
-untracked --exclude *.pyc --excludedir .git --excludedir bak build plugins/cool-plugin1
+untracked --exclude "*.pyc" --excludedir .git --excludedir bak build plugins/cool-plugin1
