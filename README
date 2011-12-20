@@ -1,1 +1,32 @@
 Updates your Gondor config to include multiple files in a directory easily.
+
+Usage:
+untracked [-h] [--config CONFIG] [--configold CONFIGOLD] [--exclude EXCLUDE]
+          [--excludedir EXCLUDEDIR] DIR [DIR ...]
+
+Update Gondor config with multiple untracked files
+
+positional arguments:
+  DIR                   Directory to recurse
+
+optional arguments:
+  -h, --help              Show this help message and exit
+  --config CONFIG         Path to config file, Default: .gondor/config
+  --configold CONFIGOLD   Path to copy old config file, Default: .gondor/config.old
+  --exclude EXCLUDE       Exclude files. Default: *.pyc., .*
+  --excludedir EXCLUDEDIR Exclude directories. Default: .git
+
+Before using:
+cd django_project_dir/
+
+Example Usage:
+untracked plugins/cool-plugin1
+
+Multiple Directories:
+untracked plugins/cool-plugin1 plugins/cool-plugin2
+
+Exclude Files:
+untracked --exclude *.pyc --exclude *.bak plugins/cool-plugin1
+
+Exclude Directory:
+untracked --exclude *.pyc --excludedir .git --excludedir bak build plugins/cool-plugin1
